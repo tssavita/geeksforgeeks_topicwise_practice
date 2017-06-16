@@ -56,6 +56,8 @@ bool usedInGrid(int grid[N][N], int row, int column, int digit) {
     int g_c_start = (column / 3) * 3;
     int g_c_end = (column == 0)? 0: ((column + 3 - 1) / 3) * 3;
     
+    // cout << g_r_start << " " << g_r_end << " " << g_c_start << " " << g_c_end << endl;
+    
     for (int i = g_r_start; i < g_r_end; i++) 
         for (int j = g_c_start; j < g_c_end; j++) 
             if (grid[i][j] == digit) 
@@ -63,8 +65,6 @@ bool usedInGrid(int grid[N][N], int row, int column, int digit) {
 
     return false; 
 }
-
-
 
 bool solve(int grid[N][N]) {
     

@@ -57,3 +57,9 @@ Operations on the Disjoint Set Data Structure are as follows:
                 yRoot.rank = yRoot.rank + 1
     ```
     * Time Complexity - 
+
+
+## Applications 
+
+* Detecting if there exists a cycle in an undirected graph.
+* Kruksal's algorithm for minimum spanning tree formation.

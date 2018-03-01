@@ -1,6 +1,6 @@
 # Disjoint Set Data Structure
 
-* __Disjoint set data structure__ - A Disjoint set data structure keeps track of a set of elements partitioned into a number of disjoint subsets. It provides near constant time operations to add new sets and to determine whether elements are in the same set. It finds its application in Kruksal's algorithm for minimum spanning tree formation. 
+A Disjoint set data structure keeps track of a set of elements partitioned into a number of disjoint subsets. It provides near constant time operations to add new sets and to determine whether elements are in the same set. It finds its application in Kruksal's algorithm for minimum spanning tree formation. 
 
 A Disjoint forest element consists of:
 * an id,

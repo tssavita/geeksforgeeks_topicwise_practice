@@ -40,6 +40,8 @@ Some of the applications of a Minimum Spanning Tree are as follows:
 
 ## Sources
 
-1. Geeks for Geeks 
-2. [http://www.utdallas.edu/~besp/teaching/mst-applications.pdf]<http://www.utdallas.edu/~besp/teaching/mst-applications.pdf>
-3. [https://en.wikipedia.org/wiki/Cluster_analysis]<https://en.wikipedia.org/wiki/Cluster_analysis>
+1. [https://www.geeksforgeeks.org/applications-of-minimum-spanning-tree/](https://www.geeksforgeeks.org/applications-of-minimum-spanning-tree/)
+2. [http://www.utdallas.edu/~besp/teaching/mst-applications.pdf](http://www.utdallas.edu/~besp/teaching/mst-applications.pdf)
+3. [https://en.wikipedia.org/wiki/Cluster_analysis](https://en.wikipedia.org/wiki/Cluster_analysis)
+4. [https://en.wikipedia.org/wiki/Spanning_Tree_Protocol](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol)
+5. [https://www.quora.com/What-is-a-real-time-practical-application-of-the-Minimum-Spanning-Tree-MST](https://www.quora.com/What-is-a-real-time-practical-application-of-the-Minimum-Spanning-Tree-MST)

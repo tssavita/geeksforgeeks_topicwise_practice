@@ -25,7 +25,8 @@ Operations on the Disjoint Set Data Structure are as follows:
 * Find
     * Function - Find(x) traverses upwards through the parent pointer of each element, till it finds the element whose parent is itself.
         * This the root of the tree. 
-        * The root of a tree is the representative member. 
+        * The root of a tree is the representative member. a
+        * One method to optimize the find is to use _Path Compression_ technique, which flattens the tree on which Find has to be applied and speeds up the process. 
     * Pseudocode - 
     ```
         function Find(x)

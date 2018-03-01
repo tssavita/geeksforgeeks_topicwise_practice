@@ -34,7 +34,7 @@ Operations on the Disjoint Set Data Structure are as follows:
             x.parent = Find(x.parent)
         return x.parent
 ```
-    * Time Complexity - 
+    * Time Complexity - Naive approach - O(n)
 * Union 
     * Function - Finds if x and y belong to the same root and join them if not. (Given two subsets, Union joins them)
         * The naive method to do the joining is by always making x a child of y or vice versa. But if unchecked, the height of the tree can grow by O(n). 
@@ -56,10 +56,15 @@ Operations on the Disjoint Set Data Structure are as follows:
                 xRoot.parent = yRoot
                 yRoot.rank = yRoot.rank + 1
     ```
-    * Time Complexity - 
+    * Time Complexity - Naive Approach O(n)
 
 
 ## Applications 
 
 * Detecting if there exists a cycle in an undirected graph.
 * Kruksal's algorithm for minimum spanning tree formation.
+
+## Optimization techniques
+
+- Path compression
+- Union by Rank

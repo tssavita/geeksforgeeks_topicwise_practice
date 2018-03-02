@@ -21,20 +21,22 @@ Operations on the Disjoint Set Data Structure are as follows:
             x.parent = x
             x.rank = 0
 ```
-    * time Complexity - O(1)
-* find
-    * function - Find(x) traverses upwards through the parent pointer of each element, till it finds the element whose parent is itself.
+    * Time Complexity - O(1)
+* Find
+    * Function - Find(x) traverses upwards through the parent pointer of each element, till it finds the element whose parent is itself.
         * This the root of the tree. 
         * The root of a tree is the representative member. a
         * One method to optimize the find is to use _Path Compression_ technique, which flattens the tree on which Find has to be applied and speeds up the process. 
-    * pseudocode - 
+    * Pseudocode - 
 ```
     function Find(x)
         if x != x.parent
             x.parent = Find(x.parent)
         return x.parent
 ```
-    * Time Complexity - Naive approach - O(n)
+    * Time Complexity - 
+        * Naive approach - O(n) - linear
+        * 
 * Union 
     * Function - Finds if x and y belong to the same root and join them if not. (Given two subsets, Union joins them)
         * The naive method to do the joining is by always making x a child of y or vice versa. But if unchecked, the height of the tree can grow by O(n). 
@@ -56,8 +58,8 @@ Operations on the Disjoint Set Data Structure are as follows:
                 xRoot.parent = yRoot
                 yRoot.rank = yRoot.rank + 1
     ```
-    * Time Complexity - Naive Approach O(n)
-
+    * Time Complexity - 
+        * Naive approach - O(n) - linear
 
 ## Applications 
 

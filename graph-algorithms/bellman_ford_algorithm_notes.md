@@ -19,7 +19,11 @@ class Graph {
 
 ## Applications 
 
-### Negative weights and negative cycles
+### Network Flow Analysis
+
+The Bellman-Ford algorithm stops finding the shortest path when it finds a negative edge cycle. This feature can be used for cycle-cancelling techniques.
+
+#### Negative weights and negative cycles
 
 A negative cycle is one with edges whose weights add up to a negative weight.
 
@@ -30,3 +34,9 @@ A negative cycle is one with edges whose weights add up to a negative weight.
 ### Distributed system applications 
 
 * Bellman-Ford algorithm works better for distributed systems because the edges are traversed instead of finding a vertex with the minimum distance each time. 
+
+## Sources 
+
+* [http://www.cse.unsw.edu.au/~cs2011/05s2/assignment4-solutions.pdf](http://www.cse.unsw.edu.au/~cs2011/05s2/assignment4-solutions.pdf)
+* [https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm)
+* [

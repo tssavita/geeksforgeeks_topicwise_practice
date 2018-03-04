@@ -19,6 +19,10 @@ class Graph {
 
 ## Applications 
 
+### Routing Protocols. 
+
+The Bellman-Ford algorithm is used in distance vector routing algorithms, like Routing Information Protocol(RIP). In a distance vector routing protocol, each 
+
 ### Network Flow Analysis
 
 The Bellman-Ford algorithm stops finding the shortest path when it finds a negative edge cycle. This feature can be used for cycle-cancelling techniques.
@@ -39,4 +43,5 @@ A negative cycle is one with edges whose weights add up to a negative weight.
 
 * [http://www.cse.unsw.edu.au/~cs2011/05s2/assignment4-solutions.pdf](http://www.cse.unsw.edu.au/~cs2011/05s2/assignment4-solutions.pdf)
 * [https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm)
-* [
+* [https://www.geeksforgeeks.org/dynamic-programming-set-23-bellman-ford-algorithm/](https://www.geeksforgeeks.org/dynamic-programming-set-23-bellman-ford-algorithm/)
+* [https://www.geeksforgeeks.org/detect-negative-cycle-graph-bellman-ford/](https://www.geeksforgeeks.org/detect-negative-cycle-graph-bellman-ford/)

@@ -15,5 +15,5 @@ Dynamic Programming is an algorithmic paradigm used to solve complex problems by
     </p>
 
     * __Overlapping subproblems__ - In dynamic programming, the solutions of subproblems are stored in a table so that the subproblems do not need to be solved repetitively. It makes sense to use dynamic programming only when subproblems are common. For example, dynamic programming is not useful for binary search that does not have any common subproblems, unlike the Fibonacci. There are two ways:
-        * __Top-down approach - Memoization__ - 
-        * __Bottom-up approach__ - 
+        * __Top-down approach - Memoization__ - An array is initialized that is set to INT_MAX. When we need a solution to a subproblem, we look up the table that stores the results for subproblems. If result is found, then it is returned. If not then it is calculated and stored. 
+        * __Bottom-up approach - Tabulation__ -  This method calculates the solution for all possible subproblems, whether or not all these solutions are required or not. 

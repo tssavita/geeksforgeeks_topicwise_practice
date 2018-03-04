@@ -21,7 +21,7 @@ class Graph {
 
 ### Routing Protocols
 
-The Bellman-Ford algorithm is used in distance vector routing algorithms, like Routing Information Protocol(RIP). The algorithm is run on each router within an Autonomous System(An Autonomous System is a collection of connected IP routing prefixes that are controlled by an administrative entity, that has a clear routing policy to the Internet. It is also a collection of IP networks owned by the Internet Service Provider). In a distributed variant of the Bellman-Ford algorithm, 
+The Bellman-Ford algorithm is used in __distance vector routing algorithms__, like __Routing Information Protocol(RIP)__. The algorithm is run on each router within an __Autonomous System__*(An Autonomous System is a collection of connected IP routing prefixes that are controlled by one or more network operators on behalf of an administrative entity, that has a clear routing policy to the Internet. It is also a collection of IP networks owned by the Internet Service Provider)*. In a distributed variant of the Bellman-Ford algorithm, 
 * Each node calculates the shortest path between itself and every other node in the AS.
 * Each node distributes this table with its neighbouring nodes. 
 * When it receives a table from its neighbour, it updates its own table if it finds a shorter path to a node from the table it received. 

@@ -24,6 +24,14 @@ Dynamic Programming was founded by Richard Bellman. A bit of history - The term 
         * __Top-down approach - Memoization__ - An array is initialized that is set to INT_MAX. When we need a solution to a subproblem, we look up the table that stores the results for subproblems. If result is found, then it is returned. If not then it is calculated and stored. 
         * __Bottom-up approach - Tabulation__ -  This method calculates the solution for all possible subproblems, whether or not all these solutions are required or not. 
 
+## Differences between Memoization and Tabulation
+
+| Tabulation | Memoization |
+| ---------- | ----------- |
+| Code contains more lines and conditions | Code is short and simple. |
+| Faster as previous values are accessed from the table that has cached the results of subproblems. | Slower due to recursive calls and return statements. |
+| Each entry in the table is filled starting from the lowest value for the state | Entries are filled depending on their need when calculating from top down. |
+
 ## Sources 
 
 * [http://www.ics.uci.edu/~eppstein/161/960109.html](http://www.ics.uci.edu/~eppstein/161/960109.html)

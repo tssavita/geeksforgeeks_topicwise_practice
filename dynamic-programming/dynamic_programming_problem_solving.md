@@ -8,8 +8,7 @@ There are 4 important steps:
 
 * __Establishing a relation between the states__ - Figuring out how the basic recursion would take place by determining how to move from one state to the other. For example, in the case of a problem where we need to calculate the number of ways a n steps can be covered, if a person may take one step, 2 steps or 3 steps at a time,
     * the *state* would be *n*
-    * the *relation between states* would be steps(n-1) + steps(n-2) + steps(n-3)
-    This solution would however lead to an exponential complexity and this brings us to our next point. 
+    * the *relation between states* would be steps(n-1) + steps(n-2) + steps(n-3). This solution would however lead to an exponential complexity and this brings us to our next point. 
     
 * __Using memoization or tabulation__ - We need to cache the results of the previous solutions calculated in order to avoid repetitive and redundant computation. This could be a top-down approach where we look for whether func(n) value has already been calculated in the table and if not, we calculate it as a function of subproblems. Similarly for their subproblems. In the case of bottom up approach, we start from the least possible value for the state, and work our way up to the highset limit of the state, all the while filling up the caching table. 
 

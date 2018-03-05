@@ -2,7 +2,13 @@
 
 Dynamic Programming is an algorithmic paradigm used to solve complex problems by breaking them into smaller subproblems, solving and caching the solutions of the subproblems so that they can be reused for solving other problems. Dynamic programming is also often used for optimization of an existing solution to a problem.
 
-# Applications
+One interesting way of seeing dynamic programming is "careful brute force". Careful and brute force are not something that would come together - Oxymoron. 
+
+## History
+
+Dynamic Programming was founded by Richard Bellman. A bit of history - The term dynamic programming was coined by Richard Bellman to hide the fact that he was doing mathematical research. His employee was hateful of the term "research".
+
+## Applications
 
 * __Bioinformatics__ - Dynamic programming is widely used for sequence alignment(*a method of arranging the DNA, RNA and proteins to determing areas that are of similarity, which may be a consequence from functional, structural or evolutionary relationships between sequences*), RNA structure prediction, protein-DNA folding, etc. Some keywords are __nucleosome positioning__ and __transcription factor binding__.
 

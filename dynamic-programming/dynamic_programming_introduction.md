@@ -28,9 +28,9 @@ Dynamic Programming was founded by Richard Bellman. A bit of history - The term 
 
 | Tabulation | Memoization |
 | ---------- | ----------- |
-| Code contains more lines and conditions | Code is short and simple. |
+| Code contains more lines and conditions. | Code is short and simple. |
 | Faster as previous values are accessed from the table that has cached the results of subproblems. | Slower due to recursive calls and return statements. |
-| Each entry in the table is filled starting from the lowest value for the state | Entries are filled depending on their need when calculating from top down. |
+| Each entry in the table is filled starting from the lowest value for the state. | Entries are filled depending on their need when calculating from top down. |
 
 ## Sources 
 

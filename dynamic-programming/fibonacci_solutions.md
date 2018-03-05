@@ -2,7 +2,7 @@
 
 There are multiple ways to extract the n-th Fibonacci number
 
-## The Recursive Algorithm
+## Solution 1: The Recursive Algorithm
 
 ### Code:
 ```
@@ -16,7 +16,7 @@ int fibonacci(int n) {
 
 For every call of the fibonacci(n), there will be two other fibonacci function calls. This leads to an exponential growth in the number of function calls. This algorithm is extremely slow and for n = 45, it takes about a billion steps.
 
-### Space Complexity: 
+### Space Complexity: O(n)
 
 There are two types of spaces that one needs to take into account:
 
@@ -25,7 +25,7 @@ There are two types of spaces that one needs to take into account:
 
 Especially in the case of recursion, there is also the space to considered, that is occupied by current recursive calls. Each recursive call takes a constance space. In the recursive tree, the length could be at least n times long. So, the space complexity could be O(n) *at the least*. The memory occupied by a recursive function could be generalized as O(recursive depth). It depends on the number of return statements because each function call will be stored on the program stack.
 
-## Dynamic Programming: A bottom up algorithm
+## Solution 2: Dynamic Programming: A bottom up algorithm
 
 ### Code 
 ```
@@ -51,9 +51,45 @@ This algorithm occupies more space than the vanilla recursive algorithm - it use
 
 However at this point, we need to draw attention to the fact that we are not only concerned about improving the time complexity, but we also need to optimize the space complexity. In fact, even if a program takes a lot of time to run it, we may still be able to execute it, but if takes a lot of memory, we may not even be able to run it. Using a caching mechanism to store the value of all the subproblems is not the most efficient way of using space complexity. 
 
-* A bottom up algorithm without caching previous results
-* Matrix Exponentiation
-* Matrix Exponentiation Optimized
+## Solution 3: A bottom up algorithm without caching previous results
+
+### Code
+```
+int fibonacci(int n) {
+    int a = 0;
+    int b = 1; 
+    int c;
+    for (int i = 0; i <= n; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    cout << c;
+}
+```
+### Time Complexity: O(n)
+
+The time complexity for this algorithm is O(n), owing to its iterative functioning. It has to be noted that it uses four statements and hence it is slower than Algorithm 2. However, using the big "O" notation, allows one to ignore the speed of execution based since it does not depend on the number of lines.
+
+### Space Complexity: O(1)
+
+The algorithm uses a constant memory. 
+
+## Solution 4: Matrix Exponentiation
+
+### Code
+```
+
+```
+### Time Complexity: O(n)
+
+### Space Complexity: O(1)
+
+## Solution 5: Matrix Exponentiation Optimized
+
+### Time Complexity: O(log n)
+
+### Space Complexity: O(1) 
 
 Sources:
 

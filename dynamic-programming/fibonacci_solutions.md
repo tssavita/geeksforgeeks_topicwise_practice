@@ -79,19 +79,64 @@ The algorithm uses a constant memory.
 
 ### Code
 ```
-
+int fibonacci(int n) {
+    int M[2][2] = {{1, 1}, {0, 1}};
+    for (int i = 1; i < n; i++) {
+        M = M * {{1, 1}, {1, 0}};
+    }
+    return M[0][0];
+}
 ```
 ### Time Complexity: O(n)
 
+The time complexity here, is O(n) as it is an iterative solution. 
+
 ### Space Complexity: O(1)
+
+There is only constance space used, the space does not grow depending on the input. 
 
 ## Solution 5: Matrix Exponentiation Optimized
 
+### Code
+```
+void multiply(int F[2][2], int M[2][2]) {
+    int w = F[0][0] * M[0][0] + F[0][1] * M[1][0];
+    int x = F[0][0] * M[0][1] + F[0][1] * M[1][1];
+    int y = F[1][0] * M[0][0] + F[1][1] * M[1][0];
+    int z = F[1][0] * M[0][1] + F[1][1] * M[1][1]
+}
+
+void power(int F[2][2], int n) {
+    if (n == 0 || n == ) 
+        return;
+    int M[2][2] = {{1, 1}, {1, 0}};
+    power(F, n/2);
+    multiply(F, F);
+
+    if (n % 2 != 0)
+        multiply(F, M);
+}
+
+int fibonacci(int n) { 
+    int M[2][2] = {{1, 1}, {1, 0}};
+
+    if (n == 0)
+        return 0;
+
+    power(F, n-1);
+
+    return F[0][0];
+}
+```
 ### Time Complexity: O(log n)
+
+The time complexity here, because the number of times recursive calls gets halved by two at each depth. 
 
 ### Space Complexity: O(1) 
 
-Sources:
+Constant time.
+
+## Sources:
 
 * [http://www.ics.uci.edu/~eppstein/161/960109.html](http://www.ics.uci.edu/~eppstein/161/960109.html)
 * [https://stackoverflow.com/questions/43298938/space-complexity-of-recursive-function](https://stackoverflow.com/questions/43298938/space-complexity-of-recursive-function)

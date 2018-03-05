@@ -24,9 +24,7 @@ C(n, 0) = C(n, n) = 1
 
 ### Factorial formula
 
-C(n, k) =   n!      for 0 <= k <= n
-         ------- 
-         k!(n-k)!
+C(n, k) =   n! / k!(n-k)!   for 0 <= k <= n
 
 #### Applications
 

@@ -21,9 +21,13 @@ int eggdroppingtrials(int eggs, int floors) {
 
     for (int i = 2; i <= eggs; i++) {
         for (int j = 2; j <= floors; j++) {
-            int res = 1 + max(cache_trials[i-1][j-1], cache_trials[i][floors-j]);
-            if (cache_trials[i][j] > res)
-                cache_trials[i][j] = res; 
+            cache_trials[i][j] = INT_MAX;
+            for (int x = 1; x <= j; x++) {
+                int res = 1 + max(cache_trials[i-1][x-1], cache_trials[i][j-x]);
+                if (cache_trials[i][j] > res)
+                    cache_trials[i][j] = res; 
+            }
+            cout <<  i << " " << j << " " << cache_trials[i][j] << endl;
         }
     }
     return cache_trials[eggs][floors];

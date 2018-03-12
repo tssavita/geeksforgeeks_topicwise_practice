@@ -1,13 +1,15 @@
 #include <iostream>
 #include <vector>
+#include <cstring>
 
 using namespace std;
 
 int best_fit(vector<int> blocksize, vector<int> processrequest) {
     int allocation[processrequest.size()];
-    for (int i = 0; i < blocksize.size(); i++) {
+    memset(allocation, -1, sizeof(allocation));
+    for (int i = 0; i < processrequest.size(); i++) {
         int idx = -1;
-        for (int j = 0; j < processrequest.size(); j++) {
+        for (int j = 0; j < blocksize.size(); j++) {
             if (blocksize[j] >= processrequest[i]) {
                 if (idx == -1)
                     idx = j;

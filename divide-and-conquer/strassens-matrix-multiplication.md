@@ -43,6 +43,16 @@ The Strassen's Matrix Multiplication is similar to Divide and Conquer method exp
             x           =   
     c   d       g   h           p3 + p4         p1 - p3 + p5 - p7
 
+where,
+
+p1 = a * (f - h)
+p2 = h * (a + b)
+p3 = e * (c + d)
+p4 = d * (g - e)
+p5 = (a + d) * (e + h)
+p6 = (b - d) * (g + h)
+p7 = (a - c) * (e + f)
+
 The recursive relation is as follows:
 ```
 T(N) = 7T(N/2) + O(N^2)

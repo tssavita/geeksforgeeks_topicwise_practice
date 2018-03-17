@@ -27,19 +27,31 @@ The following are the steps:
 
       A           B                  C
 
-The time complexity is O(N^3).
+The recursive relation is as follows: 
+```
+T(N) = 8T(N/2) + O(N^2)
+```
+The time complexity is O(N ^ log 8) =O(N ^ 3).
 
 ## Divide and Conquer - Strassen's Matrix Multiplication
 
 Time Complexity - O(N^2.8)
 
-There are however, some disadvantages of working with Divide and Conquer: 
+The Strassen's Matrix Multiplication is similar to Divide and Conquer method explained above, in that this method too divides a matrix into 4 N/2 x N/2 submatrices. However, it reduces in the number of recursive calls from 8 in the previous method to 7. The relation between the two matrices: 
 
-* Sparce matrices have special methods assigned for them. 
+    a   b       e   f       p4 + p6 + p5 - p2       p1 + p2
+            x           =   
+    c   d       g   h           p3 + p4         p1 - p3 + p5 - p7
+
+The recursive relation is as follows:
+```
+T(N) = 7T(N/2) + O(N^2)
+```
+The time complexity here is O(N ^ log 7) ~ O( N ^ 2.8074), which is slightly better than the previous method. There are however, some disadvantages of working with Divide and Conquer: 
+
+* Sparse matrices have special methods assigned for them. 
 * Recursion takes more Space complexity. 
 
 ## Sources 
 
 * [https://www.geeksforgeeks.org/strassens-matrix-multiplication/](https://www.geeksforgeeks.org/strassens-matrix-multiplication/)
-
-## Improving 

@@ -3,6 +3,8 @@
 
 #include <climits>
 
+using namespace std; 
+
 class pair_min_max {
     public:
     int min;

@@ -9,10 +9,10 @@ void swap(int &a, int &b) {
 }
 
 void after_swaps(int *arr, int n, int swaps) {
-    for (int i = 0; i < n && swaps > 0; i++) {
+    for (int i = 0; ((i < n - 1) && (swaps > 0)); i++) {
         int pos = i;
         for (int j = i + 1; j < n; j++) {
-            if (j - i)
+            if (j - i > swaps)
                 return;
             if (arr[j] < arr[pos])
                 pos = j;

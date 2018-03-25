@@ -15,7 +15,7 @@ bool is_okay(int v, int pathi, int *path, int **adjmatrix) {
 void print(int v, int *path) {
     for (int i = 0; i < v; i++) 
         cout << path[i] << " ";
-
+    cout << path[0];
     cout << endl;
 }
 
@@ -30,7 +30,7 @@ bool hamiltonian_cycle_util(int v, int pathi, int *path, int **adjmatrix) {
     for (int i = 1; i < v; i++) {
         if ( is_okay(i, pathi, path, adjmatrix) ) {
             path[pathi] = i;
-            if ( hamiltonian_cycle_util(i, pathi + 1, path, adjmatrix) )
+            if ( hamiltonian_cycle_util(v, pathi + 1, path, adjmatrix) )
                 return true;
             path[pathi] = -1;
         }

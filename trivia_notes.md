@@ -1,2 +1,0 @@
-1. Backtracking is an optimization over a naive approach. Naive approach generates all possible solutions and then chooses whichever one fits well with the conditions at hand. Backtracking on the other hand, checks at each step a particular subcomponent of the solution is chosen, if the solution satisfies the conditions at hand and if not, then backtracks and removes the chosen component, and chooses another solution.
-2. Vague 

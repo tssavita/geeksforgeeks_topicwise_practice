@@ -1,4 +1,4 @@
-# GeeksforGeeks practice
+# Algorithms practice from GeeksforGeeks website
 
 Algorithm Paradigms:
 

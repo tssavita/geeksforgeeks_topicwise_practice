@@ -3,6 +3,8 @@
 #include <queue>
 #include <stack>
 
+// from http://www.java2s.com/Tutorial/Cpp/0420__queue-stack/Aqueueforstringspushemptyfrontpop.htm
+
 using namespace std;
 int main()
 {

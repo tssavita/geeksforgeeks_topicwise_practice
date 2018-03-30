@@ -2,22 +2,23 @@
 
 using namespace std;
 
-bool is_k_partition_possible_util(int *arr, int n, int *subsum, int *included, int subsum, int k, int curr, int n) {
-    if (subsetsum[curr] == k - 2) {
-        return true;
-        is_k_partition_possible_util(arr, n, subsum, included, subsum, k, curr + 1, n - 1);
+bool is_k_partition_possible_util(int *arr, int n, int *subsum, bool *included, int subset, int k, int curr, int limit) {
+    if (subsum[curr] == subset) {
+        if (curr == k - 2) 
+            return true;
+        is_k_partition_possible_util(arr, n, subsum, included, subset, k, curr + 1, n - 1); 
     }
-    for (int i = n; i>= 0; i--) {
-        if (taken[i])
+    for (int i = limit; i>= 0; i--) {
+        if (included[i])
             continue;
         int temp = subsum[curr] + arr[i];
 
         if (temp <= subset) {
-            taken[i] = true;
+            included[i] = true;
             subsum[curr] += arr[i];
 
-            bool next = is_k_partition_possible_util(arr, n, subsum, taken, subset, k, curr, n - 1);
-            taken[i] = false;
+            bool next = is_k_partition_possible_util(arr, n, subsum, included, subset, k, curr, i - 1);
+            included[i] = false;
             subsum[curr] -= arr[i];
             if (next)
                 return true;
@@ -41,7 +42,7 @@ bool is_k_partition_possible(int *arr, int n, int k) {
     int subset = sum / k;
 
     int *subsum = new int[n];
-    bool *included = new int[n];
+    bool *included = new bool[n];
     for (int i = 0; i < n; i++) {
         subsum[i] = 0;
         included[i] = false; 
@@ -50,7 +51,7 @@ bool is_k_partition_possible(int *arr, int n, int k) {
     subsum[0] = arr[n - 1];
     included[n - 1] = true;
 
-    return is_k_partition_possible_util(arr, n, subsum, taken, subset, k, 0, n - 1);
+    return is_k_partition_possible_util(arr, n, subsum, included, subset, k, 0, n - 1);
 }
 
 int main(int argc, char **argv) {

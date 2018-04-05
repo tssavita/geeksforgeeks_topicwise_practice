@@ -23,8 +23,8 @@ bool compare_endtime(job j1, job j2) {
 
 int non_conflicting(job arr[], int n) {
     for (int j = n - 1; j >= 0; j--) {
-        if (arr[j].end < arr[n].start)
-            return arr[j].profit;
+        if (arr[j].end <= arr[n - 1].start)
+            return j;
     }
     return -1;
 }

@@ -3,7 +3,11 @@
 
 using namespace std; 
 
-bool k_palindrome(string s, string r) {
+int max(int a, int b) {
+    return a > b ? a : b;
+} 
+
+int k_palindrome(string s, string r) {
     int cache[s.size() + 1][r.size() + 1];
     for (int i = 0; i <= s.size(); i++) {
         for (int j = 0; j <= r.size(); j++) {

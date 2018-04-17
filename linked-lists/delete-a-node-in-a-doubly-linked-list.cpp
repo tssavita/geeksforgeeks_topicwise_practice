@@ -43,6 +43,27 @@ class dl_list {
             
         }
 
+        void remove_node(int key) {
+            node *temp = head; 
+            if (head == NULL) {
+                head = head->next; 
+                head->prev = NULL;
+                delete(temp); 
+            }
+
+            node *prev;
+            while (temp != NULL && temp->data != key) {
+                prev = temp;
+                temp = temp->next;
+            }
+            
+            if (temp->next != NULL) {
+                prev->next = temp->next;
+                temp->next->prev = prev; 
+            }
+            delete temp; 
+        }
+
         void print() {
             node *newnode = head;
             while (newnode != NULL) {
@@ -64,5 +85,7 @@ int main(int argc, char ** argv) {
         dll->at_head(1);
     }
 
+    dll->print();
+    dll->remove_node(3);
     dll->print();
 }
